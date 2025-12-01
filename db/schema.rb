@@ -14,6 +14,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_12_01_030511) do
   create_table "delivery_item", charset: "utf8mb4", collation: "utf8mb4_uca1400_ai_ci", force: :cascade do |t|
     t.string "asin", null: false
     t.datetime "best_before_date"
+    t.datetime "created_at", null: false
     t.datetime "delivered_at"
     t.string "fnsku"
     t.boolean "has_issue", default: false
@@ -25,7 +26,6 @@ ActiveRecord::Schema[8.1].define(version: 2025_12_01_030511) do
     t.text "remarks"
     t.datetime "shipped_at"
     t.string "sku"
-    t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 end
